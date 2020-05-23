@@ -2,11 +2,11 @@
 A space for our Dungeons and Dragons App Back End Development project!
 
 ### Team Members
-* Kory Jackson
-* Clayton Jones
+* Kory Jackson - Lead Tester
+* Clayton Jones - Lead Dev
 * Daniel Nguyen - Project Manager
-* Madison Stehle
-* Joel Watson
+* Madison Stehle - Code Reviewer
+* Joel Watson - DevOps
 
 ## Project Summary
 
