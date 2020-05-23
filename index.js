@@ -6,6 +6,9 @@ const cliSelect = require('cli-select');
 const mongoose = require('mongoose');
 const dbUrl = process.env.dbUrl;
 
+const auth = require('./lib/middleware/auth.js');
+const start = require('./lib/readline/start.js');
+
 mongoose.connect(dbUrl, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -34,4 +37,4 @@ mongoose.connection.once('open', function callback () {
 // }
 
 // 
-// start();
+start();
