@@ -1,0 +1,32 @@
+{
+  "name": "dnd",
+  "version": "1.0.0",
+  "description": "A space for our Dungeons and Dragons App Back End Development project!",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs",
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest --verbose --coverage",
+    "start": "node index.js",
+    "lint": "eslint **/*.js",
+    "test-watch": "jest --watchAll --verbose --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dungeons-Developers/DnD.git"
+  },
+  "author": "Dan Nguyen, Clayton Jones, Madison Stehle, Joel Watson & Kory Jackson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dungeons-Developers/DnD/issues"
+  },
+  "homepage": "https://github.com/Dungeons-Developers/DnD#readme",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "cli-select": "^1.1.2",
+    "jest": "^26.0.1",
+    "mongoose": "^5.9.15"
+  }
+}

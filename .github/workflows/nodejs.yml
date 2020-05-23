@@ -23,6 +23,13 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
+    - name: slack - GitHub Actions Slack integration
+      uses: act10ns/slack@v1.0.9
+      with:
+        # Specify success, failure, cancelled or a custom status.
+        status: success, failure
+        # Override default channel with different channel or username
+        channel: 401n16-dungeons-and-developers
     env:
       CI: true
   
