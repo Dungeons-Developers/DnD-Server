@@ -25,6 +25,8 @@
   "homepage": "https://github.com/Dungeons-Developers/DnD#readme",
   "dependencies": {
     "bcrypt": "^4.0.1",
+    "chalk": "^4.0.0",
+    "cli-select": "^1.1.2",
     "jest": "^26.0.1",
     "mongoose": "^5.9.15"
   }
