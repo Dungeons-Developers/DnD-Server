@@ -1,11 +1,12 @@
 'use strict';
 
 require('dotenv').config();
-const chalk = require('chalk');
 
-const mongoose = require('./data/mongoose');
+const start = require('./lib/readline/start');
+const db = require('./data/mongoose');
+const server = require('./lib/server');
 
-const auth = require('./lib/middleware/auth.js');
-const start = require('./lib/readline/start.js');
+const PORT = process.env.PORT;
 
+server.start(PORT, db);
 start();
