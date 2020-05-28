@@ -34,11 +34,14 @@ Our plan for this project is to create a robust API tool that allows players to 
 
 **6:30pm:** We put together a list of user stories focused on MVP. We also built a rough Domain Model to help structure our data flow. 
 
-### Day 3 // 2020.05.22
+### Day 3 // 2020.05.23
+
+
 
 ## Credits
 
 * [D&D Beyond](https://www.dndbeyond.com/)
 * [D&D 5th Edition API](https://www.dnd5eapi.co/)
-
+* [Gary Gygax](https://en.wikipedia.org/wiki/Gary_Gygax)
+* [D&D 5th Edition Reference for Terminal](https://github.com/cachance7/fuzzy5e)
 
