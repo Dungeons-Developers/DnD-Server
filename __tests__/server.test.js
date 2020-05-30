@@ -25,6 +25,4 @@ describe('happy path', () => {
     expect(response.body.password).toBeUndefined();
     expect(response.body.password).not.toBe('kPass');
   });
-
-
 });
