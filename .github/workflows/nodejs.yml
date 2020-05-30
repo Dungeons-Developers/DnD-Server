@@ -25,12 +25,4 @@ jobs:
     - run: npm test
     env:
       CI: true
-    - name: actions-slack
-      uses: innocarpe/actions-slack@v1
-      with:
-        # Slack message when succeeded.
-        success_text: Succeeded 🚀
-        # Slack message when failed.
-        failure_text: Failed 😱
-        # Slack message when cancelled.
-        cancelled_text: Cancelled ⚠️  
+  

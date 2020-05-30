@@ -25,4 +25,19 @@ describe('happy path', () => {
     expect(response.body.password).toBeUndefined();
     expect(response.body.password).not.toBe('kPass');
   });
+
+  it('can creates new characters', async () => {
+    let response = await mockRequest.post('/v1/api/character').setEncoding({
+      user: 'kJackson',
+      name: 'Dirrbick',
+      class: 'Fighter',
+      race: 'Dwarf',
+      abilityScores: 
+      alignment: { type: String},
+      deity: { type: String },
+      skills: { type: Object },
+      equipment: { type: Object },
+      level: { type: Number },
+    })
+  })
 });
