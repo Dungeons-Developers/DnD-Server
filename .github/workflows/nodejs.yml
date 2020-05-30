@@ -23,13 +23,15 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     - run: npm test
-    - name: slack - GitHub Actions Slack integration
-      uses: act10ns/slack@v1.0.9
+    - name: actions-slack
+      uses: innocarpe/actions-slack@v1
       with:
-        # Specify success, failure, cancelled or a custom status.
-        status: success, failure
-        # Override default channel with different channel or username
-        channel: 401n16-dungeons-and-developers
+        # Slack message when succeeded.
+        success_text: Succeeded 🚀
+        # Slack message when failed.
+        failure_text: Failed 😱
+        # Slack message when cancelled.
+        cancelled_text: Cancelled ⚠️
     env:
       CI: true
   
