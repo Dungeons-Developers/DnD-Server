@@ -6,11 +6,29 @@
 // test if character already exists
 // test if user already exists???
 // 
-// test that it is encrypted
+// test the response when not correct information
 const serverObj = require('../lib/server.js');
 const supergoose = require('@code-fellows/supergoose');
 
 const mockRequest = supergoose(serverObj.server);
+
+let object = {
+  _id: 1,
+  name: 'hello',
+  class: 'Fighter',
+  race: 'Gnome',
+  alignment: 'Lawful Good',
+  deity: 'Talos, God of Storms',
+  proficient_skills: { skill_1: 'Intimidate', skill_2: 'Search' },
+  equipment:
+   { armor: 'Chain Mail',
+     adventure_packs: 'Dungeoners Kit',
+     weapons: { choice_1: 'Great Axe', choice_2: 'War Hammer' } 
+     },
+  ability_scores: { str: 16, dex: 14, con: 15, int: 11, wis: 13, cha: 14 },
+  user: 'username',
+  __v: 0
+};
 
 describe('happy path', () => {
   it('can create a user', async () => {
@@ -27,17 +45,11 @@ describe('happy path', () => {
   });
 
   it('can creates new characters', async () => {
-    let response = await mockRequest.post('/v1/api/character').setEncoding({
-      user: 'kJackson',
-      name: 'Dirrbick',
-      class: 'Fighter',
-      race: 'Dwarf',
-      abilityScores: 
-      alignment: { type: String},
-      deity: { type: String },
-      skills: { type: Object },
-      equipment: { type: Object },
-      level: { type: Number },
-    })
-  })
+    let response = await mockRequest.post('/v1/api/character').send(object);
+
+    expect(response.status).toBe(201);
+
+    expect(response.body).toBeDefined;
+  });
+
 });
