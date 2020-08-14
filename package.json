@@ -10,6 +10,7 @@
   "scripts": {
     "test": "jest --verbose --coverage",
     "start": "node index.js",
+    "dev": "nodemon index.js",
     "lint": "eslint **/*.js",
     "test-watch": "jest --watchAll --verbose --coverage"
   },
@@ -32,6 +33,8 @@
     "express": "^4.17.1",
     "express-swagger-generator": "^1.1.17",
     "jest": "^26.0.1",
+    "js-base64": "^3.4.5",
+    "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.15",
     "morgan": "^1.10.0",
     "socket.io": "^2.3.0"
